@@ -11,3 +11,7 @@ aws cognito-idp list-user-pools --max-results 10 --starting-token [NextToken]
 # Get user pool details. Replace <user-pool-id> with your user pool ID.
 aws cognito-idp describe-user-pool --user-pool-id <user-pool-id>
 
+# Create a new user pool. 
+# Replace <pool-name> with your pool name.
+aws cognito-idp create-user-pool --pool-name <pool-name> --auto-verified-attributes email --policies 'PasswordPolicy={MinimumLength=8,RequireUppercase=false,RequireLowercase=false,RequireNumbers=false,RequireSymbols=false}'
+
